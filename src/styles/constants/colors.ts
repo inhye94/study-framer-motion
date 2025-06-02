@@ -1,0 +1,14 @@
+export const colors: Record<string, string> = {
+  primary: "#b3d492",
+  secondary: "#f0f0f0",
+  tertiary: "#666",
+  text: "#333",
+  background: "#fff",
+  border: "#aaa",
+  shadow: "rgba(0, 0, 0, 0.1)",
+  highlight: "#ffcc00",
+  error: "#ff4d4d",
+  success: "#4caf50",
+  warning: "#ff9800",
+  white: "#fff",
+};

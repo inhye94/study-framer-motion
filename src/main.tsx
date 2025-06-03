@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App.tsx";
 import Sidebar from "./components/Sidebar.tsx";
 import SidebarLayout from "./pages/layouts/SidebarLayout.tsx";
-import PracticePage from "./pages/sidebar/PracticePage.tsx";
+import { animateMenus } from "./shared/menus.ts";
 import "./styles/index.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -21,7 +21,12 @@ createRoot(document.getElementById("root")!).render(
             }
           >
             <Route index element={<p>홈이에용</p>} />
-            <Route path="practice" element={<PracticePage />} />
+
+            <Route path="animate">
+              {animateMenus.map(({ path, element: PageComponent }) => (
+                <Route path={path} element={<PageComponent />} />
+              ))}
+            </Route>
           </Route>
         </Route>
       </Routes>

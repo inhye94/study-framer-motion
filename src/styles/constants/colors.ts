@@ -11,4 +11,5 @@ export const colors: Record<string, string> = {
   success: "#4caf50",
   warning: "#ff9800",
   white: "#fff",
+  black: "#000",
 };

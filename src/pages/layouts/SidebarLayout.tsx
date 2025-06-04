@@ -17,7 +17,7 @@ export default function SidebarLayout({ label, sidebar }: ISidebarLayoutProps) {
           display: grid;
           grid-template-columns: 1fr;
           gap: 20px;
-          padding: 20px 0;
+          padding-top: 20px;
 
           @media screen and (min-width: 768px) {
             grid-template-columns: 200px 1fr;

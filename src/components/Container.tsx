@@ -12,13 +12,12 @@ export default function Container({
   children,
 }: IContainerProps) {
   return (
-    <div css={wrapperCss}>
+    <div css={css([{ width: "100%" }, wrapperCss])}>
       <div
-        css={css`
-          max-width: 1200px;
-          margin: 0 auto;
-          ${contentsCss}
-        `}
+        css={css([
+          { maxWidth: "1200px", margin: "0 auto", padding: "0 8px" },
+          contentsCss,
+        ])}
       >
         {children}
       </div>

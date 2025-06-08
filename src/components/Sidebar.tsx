@@ -19,6 +19,7 @@ const StyledNavLink = styled(NavLink)`
   border-radius: 4px;
   font-weight: 500;
   color: ${colors.text};
+  text-transform: capitalize;
   transition: all 150ms ease-in-out;
   text-decoration: none;
 

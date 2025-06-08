@@ -15,7 +15,7 @@ export default function Gnb() {
         z-index: ${zIndex.gnb};
         padding: 10px 0;
         border-bottom: 1px solid ${colors.border};
-        box-shadow: 0 2px 4px ${colors.shadow};
+        box-shadow: ${shadow.box};
         backdrop-filter: blur(4px);
       `}
     >

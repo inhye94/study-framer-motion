@@ -58,13 +58,12 @@ export default function VariantPage() {
               animate="visible"
               exit="exit"
             >
-              <AnimatePresence mode="popLayout" propagate>
+              <AnimatePresence mode="popLayout">
                 {mockDatas.map((item, i) => (
                   <motion.li
                     key={item.id}
                     variants={itemStyle}
-                    exit="exit"
-                    // exit={itemStyle.exit}
+                    exit={itemStyle.exit}
                     // exit={{ opacity: 0, x: 100 }}
                     onClick={handleRemoveItem.bind(null, i)}
                     layout

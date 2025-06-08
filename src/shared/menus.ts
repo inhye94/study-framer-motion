@@ -1,6 +1,7 @@
 import InitialAnimatePage from "../pages/sidebar/InitialAnimatePage";
 import PopLayoutPage from "../pages/sidebar/PopLayoutPage";
 import PracticePage from "../pages/sidebar/PracticePage";
+import VariantPage from "../pages/sidebar/VariantPage";
 
 export interface INavMenu {
   path: string;
@@ -16,4 +17,5 @@ export const animateMenus: INavMenu[] = [
     element: InitialAnimatePage,
   },
   { path: "popLayout", label: "Exit Layout 연습", element: PopLayoutPage },
+  { path: "variant", label: "variant 연습", element: VariantPage },
 ];

@@ -1,4 +1,4 @@
-import DragAndDrop from "../pages/sidebar/DragAndDrop";
+import DragAndDropPage from "../pages/sidebar/DragAndDropPage";
 import DragPage from "../pages/sidebar/DragPage";
 import InitialAnimatePage from "../pages/sidebar/InitialAnimatePage";
 import PopLayoutPage from "../pages/sidebar/PopLayoutPage";
@@ -21,5 +21,5 @@ export const animateMenus: INavMenu[] = [
   { path: "popLayout", label: "Exit Layout 연습", element: PopLayoutPage },
   { path: "variant", label: "variant 연습", element: VariantPage },
   { path: "drag", label: "drag 연습", element: DragPage },
-  { path: "reorder", label: "reorder 연습", element: DragAndDrop },
+  { path: "reorder", label: "reorder 연습", element: DragAndDropPage },
 ];

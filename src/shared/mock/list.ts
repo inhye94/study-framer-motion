@@ -23,3 +23,10 @@ export const mockFruitsData2: string[] = [
   "🍊 Orange",
   "🥕 Carrot",
 ];
+
+export const mockFruitsData3: string[] = [
+  "🍎 Apple",
+  "🍉 Watermelon",
+  "🫐 Blueberry",
+  "🥥 Coconut",
+];

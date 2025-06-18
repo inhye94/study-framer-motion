@@ -12,4 +12,5 @@ export const colors: Record<string, string> = {
   warning: "#ff9800",
   white: "#fff",
   black: "#000",
+  transparent: "transparent",
 };

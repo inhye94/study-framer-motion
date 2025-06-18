@@ -1,20 +1,25 @@
 import { css } from "@emotion/react";
 import { Outlet } from "react-router";
 import Gnb from "./components/Gnb";
-import { colors } from "./styles/constants/colors";
 
-function App() {
+interface IAppProps {
+  className?: string;
+}
+
+function App({ className }: IAppProps) {
   return (
-    <main
+    <div
       css={css`
-        background-color: ${colors.primary};
         width: 100%;
         min-height: ${["100dvh", `${window.innerHeight}px`, "100vh"]};
       `}
+      className={className}
     >
       <Gnb />
-      <Outlet />
-    </main>
+      <main>
+        <Outlet />
+      </main>
+    </div>
   );
 }
 

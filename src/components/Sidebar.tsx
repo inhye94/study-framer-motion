@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router";
-import { animateMenus } from "../shared/menus";
+import { type INavMenu } from "../routers/menus";
 import { colors } from "../styles/constants/colors";
 import { shadow } from "../styles/constants/shadow";
 
@@ -35,16 +35,20 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-export default function Sidebar() {
+interface ISidebarProps {
+  menu: INavMenu[];
+}
+
+export default function Sidebar({ menu }: ISidebarProps) {
   return (
     <nav>
       <h2 className="visually-hidden">사이드바</h2>
 
       <StyledList>
-        {animateMenus.map((menu) => (
-          <li key={menu.path}>
-            <StyledNavLink to={`/animate/${menu.path}`}>
-              {menu.label}
+        {menu.map((item) => (
+          <li key={item.path}>
+            <StyledNavLink to={`/animate/${item.path}`}>
+              {item.text}
             </StyledNavLink>
           </li>
         ))}

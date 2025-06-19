@@ -14,3 +14,15 @@ export const colors: Record<string, string> = {
   black: "#000",
   transparent: "transparent",
 };
+
+export const appleColors: Record<string, string> = {
+  backgroundLight: "rgb(250,250,252)",
+  background: "rgb(245, 245, 247)",
+  primary: "rgba(0,0,0,0.8)",
+  secondary: "rgb(29, 29, 31)",
+  blueDark: "rgb(0, 102, 204)",
+  blue: "rgb(0, 113, 227)",
+  blueLight: "rgb(0, 118, 223)",
+  black: "rgb(0, 0, 0)",
+  white: "rgb(255, 255, 255)",
+};

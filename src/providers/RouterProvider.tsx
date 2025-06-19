@@ -5,6 +5,9 @@ import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import NoSidebarLayout from "../pages/layouts/NoSidebarLayout";
 import SidebarLayout from "../pages/layouts/SidebarLayout";
+import IPhoneDetailPage from "../pages/no-sidebar/apple/IPhoneDetailPage";
+import IPhoneMainPage from "../pages/no-sidebar/apple/IPhoneMainPage";
+import PracticeMainHome from "../pages/no-sidebar/PracticeMainPage";
 import { animateMenus } from "../routers/menus";
 import { colors } from "../styles/constants/colors";
 
@@ -49,9 +52,13 @@ export default function RouterProvider() {
 
         {/* 연습 */}
         <Route element={<App css={background.practice} />}>
-          <Route element={<NoSidebarLayout label="framer-motion 연습" />}>
-            <Route path="practice">
-              <Route index element={<Main text="practice 홈" />} />
+          <Route path="practice">
+            <Route element={<NoSidebarLayout label="framer-motion 연습" />}>
+              <Route index element={<PracticeMainHome />} />
+            </Route>
+            <Route path="apple">
+              <Route index element={<IPhoneMainPage />} />
+              <Route path="iphone" element={<IPhoneDetailPage />} />
             </Route>
           </Route>
         </Route>

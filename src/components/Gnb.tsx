@@ -50,11 +50,20 @@ export default function Gnb() {
             marginLeft: 12,
           }}
         >
-          <li>
-            <Link to="animate">기초 페이지</Link>
+          <li
+            css={css({
+              color: colors.black,
+              fontWeight: 500,
+              transition: "color 150ms ease-in-out",
+              ":hover": {
+                color: colors.text,
+              },
+            })}
+          >
+            <Link to="animate">기초</Link>
           </li>
           <li>
-            <Link to="practice">연습 페이지</Link>
+            <Link to="practice">연습</Link>
           </li>
         </ul>
       </div>

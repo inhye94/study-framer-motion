@@ -90,6 +90,7 @@ export default function AppleButton<T extends React.ElementType = "button">({
           borderRadius: 100,
           fontSize: 17,
           transition: "all 150ms ease-in-out",
+          whiteSpace: "nowrap",
         },
         variantStyle[variant][color],
       ])}

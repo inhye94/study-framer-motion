@@ -3,7 +3,10 @@ import styled from "@emotion/styled";
 import { cubicBezier, motion } from "motion/react";
 import Container from "../../../components/Container";
 import { appleColors } from "../../../styles/constants/colors";
+import AppleBanner from "./components/AppleBanner";
+import AppleButton from "./components/AppleButton";
 import AppleGnb from "./components/AppleGnb";
+import AppleSection from "./components/AppleSection";
 import IPhoneMenu from "./components/IPhoneMenu";
 
 const SNavWrapper = styled.div`
@@ -68,6 +71,35 @@ export default function IPhoneMainPage() {
           </SRibbon>
         </motion.div>
       </header>
+
+      <AppleSection css={css({ paddingTop: 80 })}>
+        <AppleSection.Header title="iPhone" size="big">
+          <AppleSection.Description>
+            <p>사랑받기 위해 디자인되다.</p>
+          </AppleSection.Description>
+        </AppleSection.Header>
+
+        <AppleBanner backgroundUrl="https://www.apple.com/kr/iphone/home/images/overview/soip/soip_poster__bxj7ggqms2z6_xlarge.jpg">
+          <h2
+            css={css({
+              width: 456,
+              height: 91,
+              backgroundImage:
+                'url("https://www.apple.com/kr/iphone/home/images/overview/soip/soip_title__c13lvjdxm70i_xlarge.png")',
+            })}
+          ></h2>
+          <AppleBanner.Paragraph text="4K120 슬로 모션, iPhone 16 Pro로 찍다." />
+
+          <AppleBanner.NavGroup>
+            <AppleButton as="a" href="apple/iphone">
+              비하인드 영상 보기
+            </AppleButton>
+            <AppleButton as="a" href="apple/iphone" variant="outlined">
+              iPhone 16 Pro 살펴보기
+            </AppleButton>
+          </AppleBanner.NavGroup>
+        </AppleBanner>
+      </AppleSection>
     </section>
   );
 }
